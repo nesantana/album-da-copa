@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import bgHeader from '@src/Images/bg-header-logged.jpg'
-import bgFooter from '@src/Images/bg-footer-logged.jpg'
+import bgHeader from '@src/Images/bgHeader.jpg'
+import bgFooter from '@src/Images/bgFooter.jpg'
 import { Colors } from '@src/Styles/Colors'
 
 export const BoxMyAlbum = styled.div`

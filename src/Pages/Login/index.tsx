@@ -77,7 +77,7 @@ export const Login: React.FC<any> = () => {
                       </div>
                 </div>
                 <div>
-                  <FiX onClick={() => setError([])} role="button"/>
+                  <FiX onClick={() => setError('')} role="button"/>
                 </div>
               </div>
             </>
