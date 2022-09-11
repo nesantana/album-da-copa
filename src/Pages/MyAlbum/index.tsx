@@ -1,4 +1,6 @@
 import { api, urls } from '@src/Services/Api'
+import bgHeader from '@src/Images/bgHeader.jpg'
+import bgFooter from '@src/Images/bgFooter.jpg'
 import { Separator, SimpleText, Title1 } from '@src/Styles'
 import React, { useEffect, useState } from 'react'
 import { BoxMyAlbum, BoxSimpleText, ContentBoxAlbum, Countries, Country, Footer, Header, Sticker, Stickers } from './styled'
@@ -106,7 +108,7 @@ export const MyAlbum: React.FC<any> = () => {
 
   return (
     <BoxMyAlbum>
-      <Header>
+      <Header image={bgHeader}>
         <Title1>
           {username ? `Album do ${username}` : 'Meu Album'}
         </Title1>
@@ -178,7 +180,7 @@ export const MyAlbum: React.FC<any> = () => {
           }
           </div>
       </BoxSimpleText>
-      <Footer>
+      <Footer image={bgFooter}>
         <FiYoutube />
         <SimpleText>
           Created by Be Dev Club
