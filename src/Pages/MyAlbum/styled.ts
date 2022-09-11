@@ -11,8 +11,8 @@ export const BoxMyAlbum = styled.div`
   }
 `
 
-export const Header = styled.div<any>`
-  background: url(${({ image }) => image.src}) no-repeat center center;
+export const Header = styled.div`
+  background: url(/bgHeader.jpg) no-repeat center center;
   background-size: cover;
   height: 95px;
   display: flex;
@@ -92,8 +92,8 @@ export const Sticker = styled.div`
   }
 `
 
-export const Footer = styled.div<any>`
-  background: url(${({ image }) => image.src}) no-repeat center center;
+export const Footer = styled.div`
+  background: url(/bgFooter.jpg) no-repeat center center;
   background-size: cover;
   height: 60px;
   display: flex;

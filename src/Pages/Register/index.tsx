@@ -1,6 +1,5 @@
 import { Dashboard } from '@src/Components/Dashboard'
 import React, { useState } from 'react'
-import album from '@src/Images/album.png'
 import { Separator, Title1 } from '@src/Styles'
 import { Button } from '@src/Components/Button'
 import { Input } from '@src/Components/Input'
@@ -99,7 +98,7 @@ export const Register: React.FC<any> = () => {
           }
         </div>
         <div className="col-md-6 col-sm-12">
-          <img src={album.src} alt="Album da Copa 2022" />
+          <img src="/album.png" alt="Album da Copa 2022" />
         </div>
       </div>
     </Dashboard>
