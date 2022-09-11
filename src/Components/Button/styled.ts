@@ -8,8 +8,8 @@ interface iBoxButton {
 }
 
 export const BoxButton = styled.div<iBoxButton>`
-  ${ ({ fullWidth }) => fullWidth && `width: 100%;` }
-  ${ ({ type }) => {
+  ${({ fullWidth }) => fullWidth && 'width: 100%;'}
+  ${({ type }) => {
     if (type === 'primary') {
       return `
         background-color: ${Colors.primary};
@@ -33,5 +33,5 @@ export const BoxButton = styled.div<iBoxButton>`
         }
       `
     }
-  } }
+  }}
 `

@@ -25,7 +25,7 @@ export const Register: React.FC<any> = () => {
       username: user,
       email,
       password,
-      confirm_password: confirmPassword
+      confirm_password: confirmPassword,
     }
 
     try {
@@ -34,7 +34,7 @@ export const Register: React.FC<any> = () => {
       setSuccess(true)
       setTimeout(() => {
         router.push('/login')
-      }, 3000);
+      }, 3000)
     } catch (err: any) {
       setError(err.response.data.error)
       console.error(err)
@@ -47,16 +47,16 @@ export const Register: React.FC<any> = () => {
     <Dashboard withBackground>
       <div className="row justify-content-center align-items-center">
         <div className="col-md-4 col-sm-12">
-          <Title1 className='text-end'>Cadastre-se</Title1>
+          <Title1 className="text-end">Cadastre-se</Title1>
           <Separator size={30} />
-          
-          <Input value={user} setValue={setUser} label="Nome de Usuário"/>
+
+          <Input value={user} setValue={setUser} label="Nome de Usuário" />
           <Separator />
-          <Input value={email} setValue={setEmail} label="E-mail"/>
+          <Input value={email} setValue={setEmail} label="E-mail" />
           <Separator />
-          <Input value={password}  type="password" setValue={setPassword} label="Senha"/>
+          <Input value={password} type="password" setValue={setPassword} label="Senha" />
           <Separator />
-          <Input value={confirmPassword} type="password" setValue={setConfirmPassword} label="Confirmação de Senha"/>
+          <Input value={confirmPassword} type="password" setValue={setConfirmPassword} label="Confirmação de Senha" />
 
           <div className="row">
             <div className="col-md-6">
@@ -68,13 +68,13 @@ export const Register: React.FC<any> = () => {
               <Button fullWidth loading={loading} onClick={handleCreateUser}>Cadastrar</Button>
             </div>
           </div>
-          
+
           {
             !!error.length && (
             <div className="alert alert-danger d-flex align-items-center justify-content-between" role="alert">
               <div>
                 {
-                  error.map(err => (
+                  error.map((err) => (
                     <div key={err}>
                       { err }
                       <Separator size="10" />
@@ -83,7 +83,7 @@ export const Register: React.FC<any> = () => {
                 }
               </div>
               <div>
-                <FiX onClick={() => setError([])} role="button"/>
+                <FiX onClick={() => setError([])} role="button" />
               </div>
             </div>
             )

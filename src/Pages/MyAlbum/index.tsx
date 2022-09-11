@@ -3,9 +3,11 @@ import bgHeader from '@src/Images/bgHeader.jpg'
 import bgFooter from '@src/Images/bgFooter.jpg'
 import { Separator, SimpleText, Title1 } from '@src/Styles'
 import React, { useEffect, useState } from 'react'
-import { BoxMyAlbum, BoxSimpleText, ContentBoxAlbum, Countries, Country, Footer, Header, Sticker, Stickers } from './styled'
 import { FiYoutube } from 'react-icons/fi'
 import { useRouter } from 'next/router'
+import {
+  BoxMyAlbum, BoxSimpleText, ContentBoxAlbum, Countries, Country, Footer, Header, Sticker, Stickers,
+} from './styled'
 
 interface iMyAlbum {
   id_user: number | string
@@ -44,7 +46,7 @@ export const MyAlbum: React.FC<any> = () => {
       setMyAlbum(data as iMyAlbum)
       setSelectedCountry(data.countries[0].name as string)
       setStickers(data.countries[0].items as [])
-    } catch(err) {
+    } catch (err) {
       console.error(err)
     }
   }
@@ -78,7 +80,7 @@ export const MyAlbum: React.FC<any> = () => {
       if (item.name === selectedCountry) {
         return {
           ...item,
-          items: newItems
+          items: newItems,
         }
       }
 
@@ -95,15 +97,13 @@ export const MyAlbum: React.FC<any> = () => {
 
       setMyAlbum({
         ...myAlbum,
-        countries: newCountries
+        countries: newCountries,
       })
 
       setStickers(newItems as boolean[])
-      
-    } catch(err) {
+    } catch (err) {
       console.error(err)
     }
-
   }
 
   return (
@@ -133,7 +133,7 @@ export const MyAlbum: React.FC<any> = () => {
             }
           </Countries>
 
-          <Separator size={30}/>
+          <Separator size={30} />
 
           <Stickers>
             {
@@ -143,23 +143,28 @@ export const MyAlbum: React.FC<any> = () => {
                   className={sticker ? 'selected' : ''}
                   onClick={() => handleChangeCountry(index)}
                 >
-                  {selectedCountry}-{index + 1}
+                  {selectedCountry}
+                  -
+                  {index + 1}
                 </Sticker>
               ))
             }
           </Stickers>
         </div>
       </ContentBoxAlbum>
-      
+
       <BoxSimpleText>
         <div className="container">
           {
             username ? (
               <div className="row">
                 <div className="col-12 text-center">
-                    <SimpleText>
-                      Você está vendo o album do {username}!
-                    </SimpleText>
+                  <SimpleText>
+                    Você está vendo o album do
+                    {' '}
+                    {username}
+                    !
+                  </SimpleText>
                 </div>
               </div>
             ) : (
@@ -178,7 +183,7 @@ export const MyAlbum: React.FC<any> = () => {
               </div>
             )
           }
-          </div>
+        </div>
       </BoxSimpleText>
       <Footer>
         <FiYoutube />

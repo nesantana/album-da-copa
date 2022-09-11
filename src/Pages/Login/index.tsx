@@ -20,7 +20,7 @@ export const Login: React.FC<any> = () => {
     setLoading(true)
     const body = {
       user,
-      password
+      password,
     }
 
     try {
@@ -33,27 +33,25 @@ export const Login: React.FC<any> = () => {
 
       setTimeout(() => {
         router.push('/meu-album')
-      }, 3000);
+      }, 3000)
     } catch (err: any) {
       setError(err.response.data.error)
       console.error(err)
     } finally {
       setLoading(false)
     }
-
-
   }
 
   return (
     <Dashboard withBackground>
       <div className="row justify-content-center align-items-center">
         <div className="col-md-4 col-sm-12">
-          <Title1 className='text-end'>Login</Title1>
+          <Title1 className="text-end">Login</Title1>
           <Separator size={30} />
-          
-          <Input value={user} setValue={setUser} label="Nome de Usuário"/>
+
+          <Input value={user} setValue={setUser} label="Nome de Usuário" />
           <Separator />
-          <Input value={password}  type="password" setValue={setPassword} label="Senha"/>
+          <Input value={password} type="password" setValue={setPassword} label="Senha" />
 
           <div className="row">
             <div className="col-md-6">
@@ -65,19 +63,19 @@ export const Login: React.FC<any> = () => {
               <Button fullWidth loading={loading} onClick={handleLogin}>Logar</Button>
             </div>
           </div>
-          
+
           {
             !!error.length && (
             <>
               <Separator size={30} />
               <div className="alert alert-danger d-flex align-items-center justify-content-between" role="alert">
                 <div>
-                      <div>
-                        { error }
-                      </div>
+                  <div>
+                    { error }
+                  </div>
                 </div>
                 <div>
-                  <FiX onClick={() => setError('')} role="button"/>
+                  <FiX onClick={() => setError('')} role="button" />
                 </div>
               </div>
             </>
@@ -92,7 +90,7 @@ export const Login: React.FC<any> = () => {
                     Usuário logado com sucesso. Aguarde estamos te redirecionando!
                   </div>
                 </div>
-            </>
+              </>
             )
           }
         </div>

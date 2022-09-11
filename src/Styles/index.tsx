@@ -24,5 +24,5 @@ interface iSeparator {
 }
 
 export const Separator = styled.div<iSeparator>`
-  ${ ({ size = 20 }) => `padding-top: ${size}px`}
+  ${({ size = 20 }) => `padding-top: ${size}px`}
 `

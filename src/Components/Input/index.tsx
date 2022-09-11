@@ -12,13 +12,18 @@ export const Input: React.FC<iInput> = ({
   label,
   value,
   setValue,
-  type = 'text'
+  type = 'text',
 }) => {
   const a = 'a'
 
   return (
     <BoxContentInput>
-      <BoxInput value={value} type={type} placeholder={label} onChange={({ target }) => setValue(target.value)}/>
+      <BoxInput
+        value={value}
+        type={type}
+        placeholder={label}
+        onChange={({ target }) => setValue(target.value)}
+      />
     </BoxContentInput>
   )
 }

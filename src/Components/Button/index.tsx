@@ -19,27 +19,24 @@ export const Button: React.FC<iButton> = ({
   fullWidth = true,
   router,
   loading = false,
-  onClick = () => {}
+  onClick = () => {},
 }) => {
-
-  const MyBytton: React.FC<any> = () => {
-    return (
-      <BoxButton
-        type={type}
-        fullWidth={fullWidth}
-        className='btn'
-        onClick={onClick}
-      >
-        {
+  const MyBytton: React.FC<any> = () => (
+    <BoxButton
+      type={type}
+      fullWidth={fullWidth}
+      className="btn"
+      onClick={onClick}
+    >
+      {
           loading ? (
             <div className="spinner-border spinner-border-sm" role="status">
               <span className="visually-hidden">Loading...</span>
             </div>
           ) : children
         }
-      </BoxButton>
-    )
-  }
+    </BoxButton>
+  )
 
   if (router) {
     return (

@@ -1,23 +1,23 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb'
+    'airbnb',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
     'react',
-    '@typescript-eslint'
+    '@typescript-eslint',
   ],
   rules: {
     indent: 2,
@@ -49,6 +49,6 @@ module.exports = {
     'react/no-children-prop': 'off',
     'no-console': 'off',
     'react/no-danger': 'off',
-    'jsx-a11y/iframe-has-title': 'off'
-  }
+    'jsx-a11y/iframe-has-title': 'off',
+  },
 }

@@ -59,7 +59,7 @@ const urls = {
   login: '/login/',
   stickers: '/stickers/',
   edit: '/stickers/edit/',
-  searchAlbum: '/stickers/searchAlbum'
+  searchAlbum: '/stickers/searchAlbum',
 }
 
 export {

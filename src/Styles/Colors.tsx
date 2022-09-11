@@ -4,5 +4,5 @@ export const Colors = {
   green: '#117C00',
   text: '#000000',
   white: '#FFFFFF',
-  textSecundary: '#999999'
+  textSecundary: '#999999',
 }
