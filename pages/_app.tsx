@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     transition: ease-in-out .3s,
   }
+  
+  img {
+    max-width: 100%;
+  }
 `
 
 function MyApp({ Component, pageProps }: AppProps) {

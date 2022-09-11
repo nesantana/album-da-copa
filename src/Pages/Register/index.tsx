@@ -57,14 +57,15 @@ export const Register: React.FC<any> = () => {
           <Input value={password}  type="password" setValue={setPassword} label="Senha"/>
           <Separator />
           <Input value={confirmPassword} type="password" setValue={setConfirmPassword} label="Confirmação de Senha"/>
-          <Separator size={30} />
 
           <div className="row">
             <div className="col-md-6">
-            <Button fullWidth type="secundary" router="/">voltar</Button>
+              <Separator size={30} />
+              <Button fullWidth type="secundary" router="/">voltar</Button>
             </div>
             <div className="col-md-6">
-            <Button fullWidth loading={loading} onClick={handleCreateUser}>Cadastrar</Button>
+              <Separator size={30} />
+              <Button fullWidth loading={loading} onClick={handleCreateUser}>Cadastrar</Button>
             </div>
           </div>
           
@@ -98,6 +99,9 @@ export const Register: React.FC<any> = () => {
           }
         </div>
         <div className="col-md-6 col-sm-12">
+          <div className="d-block d-md-none">
+            <Separator />
+          </div>
           <img src="/album.png" alt="Album da Copa 2022" />
         </div>
       </div>

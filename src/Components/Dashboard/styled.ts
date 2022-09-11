@@ -8,6 +8,11 @@ export const BgDashboard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  @media (max-width: 992px) {
+    height: auto;
+    padding: 60px 0;
+  }
 `
 
 export const BoxDashboard = styled.div`
@@ -15,4 +20,8 @@ export const BoxDashboard = styled.div`
   padding: 60px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  
+  @media (max-width: 992px) {
+    padding: 30px;
+  }
 `

@@ -54,14 +54,15 @@ export const Login: React.FC<any> = () => {
           <Input value={user} setValue={setUser} label="Nome de Usuário"/>
           <Separator />
           <Input value={password}  type="password" setValue={setPassword} label="Senha"/>
-          <Separator size={30} />
 
           <div className="row">
             <div className="col-md-6">
-            <Button fullWidth type="secundary" router="/cadastre-se">Cadastrase-se</Button>
+              <Separator size={30} />
+              <Button fullWidth type="secundary" router="/cadastre-se">Cadastrase-se</Button>
             </div>
             <div className="col-md-6">
-            <Button fullWidth loading={loading} onClick={handleLogin}>Logar</Button>
+              <Separator size={30} />
+              <Button fullWidth loading={loading} onClick={handleLogin}>Logar</Button>
             </div>
           </div>
           
@@ -96,6 +97,9 @@ export const Login: React.FC<any> = () => {
           }
         </div>
         <div className="col-md-6 col-sm-12">
+          <div className="d-block d-md-none">
+            <Separator />
+          </div>
           <img src="/album.png" alt="Album da Copa 2022" />
         </div>
       </div>
