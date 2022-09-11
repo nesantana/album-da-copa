@@ -108,7 +108,7 @@ export const MyAlbum: React.FC<any> = () => {
 
   return (
     <BoxMyAlbum>
-      <Header image={bgHeader}>
+      <Header>
         <Title1>
           {username ? `Album do ${username}` : 'Meu Album'}
         </Title1>
@@ -180,7 +180,7 @@ export const MyAlbum: React.FC<any> = () => {
           }
           </div>
       </BoxSimpleText>
-      <Footer image={bgFooter}>
+      <Footer>
         <FiYoutube />
         <SimpleText>
           Created by Be Dev Club
