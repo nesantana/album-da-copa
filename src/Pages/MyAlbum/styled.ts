@@ -1,36 +1,6 @@
 import styled from 'styled-components'
 import { Colors } from '@src/Styles/Colors'
 
-export const BoxMyAlbum = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  
-  @media (max-width: 992px) {
-    height: auto;
-  }
-`
-
-export const Header = styled.div`
-  background: url(/bgHeader.jpg) no-repeat center center;
-  background-size: cover;
-  height: 95px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  * {
-    padding: 0;
-    margin: 0;
-    color: ${Colors.white};
-  }
-`
-
-export const ContentBoxAlbum = styled.div`
-  flex: 1;
-  padding: 60px 0;
-`
-
 export const Countries = styled.div`
   background: ${Colors.green};
   padding: 20px 17px;
@@ -89,32 +59,5 @@ export const Sticker = styled.div`
   
   @media (max-width: 992px) {
     width: 47%;
-  }
-`
-
-export const Footer = styled.div`
-  background: url(/bgFooter.jpg) no-repeat center center;
-  background-size: cover;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  svg {
-    margin-right: 10px;
-  }
-
-  * {
-    padding: 0;
-    margin: 0;
-    color: ${Colors.white};
-  }
-`
-
-export const BoxSimpleText = styled.div`
-  * {
-    color: ${Colors.primary};
-    font-weight: 600;
-    font-size: 14px;
   }
 `

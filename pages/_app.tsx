@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     transition: ease-in-out .3s,
   }
+
+  *, a {
+    text-decoration: none !important;
+  }
   
   img {
     max-width: 100%;

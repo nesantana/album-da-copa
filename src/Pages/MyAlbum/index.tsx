@@ -3,9 +3,11 @@ import bgHeader from '@src/Images/bgHeader.jpg'
 import bgFooter from '@src/Images/bgFooter.jpg'
 import { Separator, SimpleText, Title1 } from '@src/Styles'
 import React, { useEffect, useState } from 'react'
-import { FiYoutube } from 'react-icons/fi'
+import { FiEdit, FiHome, FiYoutube } from 'react-icons/fi'
 import { useRouter } from 'next/router'
+import { DashboardLogged } from '@src/Components/DashboardLogged'
 import {
+  BoxIcons,
   BoxMyAlbum, BoxSimpleText, ContentBoxAlbum, Countries, Country, Footer, Header, Sticker, Stickers,
 } from './styled'
 
@@ -107,17 +109,10 @@ export const MyAlbum: React.FC<any> = () => {
   }
 
   return (
-    <BoxMyAlbum>
-      <Header>
-        <Title1>
-          {username ? `Album do ${username}` : 'Meu Album'}
-        </Title1>
-      </Header>
-
-      <ContentBoxAlbum>
-        <div className="container">
-          <Countries>
-            {
+    <DashboardLogged username={username}>
+      <div className="container">
+        <Countries>
+          {
               myAlbum.countries && myAlbum.countries.map(({ name, items }) => (
                 <Country
                   className={name === selectedCountry ? 'selected' : ''}
@@ -131,12 +126,12 @@ export const MyAlbum: React.FC<any> = () => {
                 </Country>
               ))
             }
-          </Countries>
+        </Countries>
 
-          <Separator size={30} />
+        <Separator size={30} />
 
-          <Stickers>
-            {
+        <Stickers>
+          {
               !!stickers.length && stickers.map((sticker, index) => (
                 <Sticker
                   key={`${index}-{selectedCountry}`}
@@ -149,48 +144,8 @@ export const MyAlbum: React.FC<any> = () => {
                 </Sticker>
               ))
             }
-          </Stickers>
-        </div>
-      </ContentBoxAlbum>
-
-      <BoxSimpleText>
-        <div className="container">
-          {
-            username ? (
-              <div className="row">
-                <div className="col-12 text-center">
-                  <SimpleText>
-                    Você está vendo o album do
-                    {' '}
-                    {username}
-                    !
-                  </SimpleText>
-                </div>
-              </div>
-            ) : (
-              <div className="row">
-                <div className="col-lg-6 col-sm-12 text-center text-lg-start">
-                  <SimpleText>
-                    Basta clicar nas figurinhas que já completou!
-                  </SimpleText>
-                </div>
-
-                <div className="col-lg-6 col-sm-12 text-lg-end text-center">
-                  <SimpleText>
-                    Fica tranquilo, que o salvamento é automático!
-                  </SimpleText>
-                </div>
-              </div>
-            )
-          }
-        </div>
-      </BoxSimpleText>
-      <Footer>
-        <FiYoutube />
-        <SimpleText>
-          Created by Be Dev Club
-        </SimpleText>
-      </Footer>
-    </BoxMyAlbum>
+        </Stickers>
+      </div>
+    </DashboardLogged>
   )
 }
