@@ -27,7 +27,11 @@ export const DashboardLogged: React.FC<any> = ({ children, username }) => {
           <div className="container d-flex justify-content-between">
             <BoxIcons className="d-flex">
               <FiHome onClick={() => router.push('/')} />
-              <FiEdit onClick={() => router.push('/editar')} />
+              {
+                username ? false : (
+                  <FiEdit onClick={() => router.push('/editar')} />
+                )
+              }
             </BoxIcons>
             <Title1>
               {username ? `Album do ${username}` : 'Meu Album'}
