@@ -7,8 +7,10 @@ import { FiEdit, FiHome, FiYoutube } from 'react-icons/fi'
 import { useRouter } from 'next/router'
 import { DashboardLogged } from '@src/Components/DashboardLogged'
 import {
-  BoxIcons,
-  BoxMyAlbum, BoxSimpleText, ContentBoxAlbum, Countries, Country, Footer, Header, Sticker, Stickers,
+  Countries,
+  Country,
+  Sticker,
+  Stickers,
 } from './styled'
 
 interface iMyAlbum {
