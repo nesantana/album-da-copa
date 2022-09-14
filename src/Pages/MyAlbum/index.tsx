@@ -1,9 +1,6 @@
 import { api, urls } from '@src/Services/Api'
-import bgHeader from '@src/Images/bgHeader.jpg'
-import bgFooter from '@src/Images/bgFooter.jpg'
-import { Separator, SimpleText, Title1 } from '@src/Styles'
+import { Separator } from '@src/Styles'
 import React, { useEffect, useState } from 'react'
-import { FiEdit, FiHome, FiYoutube } from 'react-icons/fi'
 import { useRouter } from 'next/router'
 import { DashboardLogged } from '@src/Components/DashboardLogged'
 import {
