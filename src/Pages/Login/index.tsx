@@ -56,11 +56,11 @@ export const Login: React.FC<any> = () => {
           <div className="row">
             <div className="col-md-6">
               <Separator size={30} />
-              <Button fullWidth type="secundary" router="/cadastre-se">Cadastrase-se</Button>
+              <Button fullWidth type="secundary" router="/">voltar</Button>
             </div>
             <div className="col-md-6">
               <Separator size={30} />
-              <Button fullWidth loading={loading} onClick={handleLogin}>Logar</Button>
+              <Button fullWidth loading={loading} onClick={handleLogin}>entrar</Button>
             </div>
           </div>
 

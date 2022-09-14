@@ -56,6 +56,8 @@ const api = new Api()
 
 const urls = {
   create: '/login/create',
+  editUser: '/login/edit',
+  findMe: '/login/find-me',
   login: '/login/',
   stickers: '/stickers/',
   edit: '/stickers/edit/',

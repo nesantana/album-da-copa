@@ -10,6 +10,15 @@ export const Title1 = styled.h1`
   }
 `
 
+export const Title3 = styled.h3`
+  color: ${Colors.primary};
+  font: bold 28px 'Montserrat', sans-serif;
+
+  @media (max-width: 992px) {
+    font-size: 18px;
+  }
+`
+
 export const SimpleText = styled.p`
   font: 400 18px 'Montserrat', sans-serif;
   color: ${Colors.text};
