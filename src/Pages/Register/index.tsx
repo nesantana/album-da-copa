@@ -65,7 +65,7 @@ export const Register: React.FC<any> = () => {
             </div>
             <div className="col-md-6">
               <Separator size={30} />
-              <Button fullWidth loading={loading} onClick={handleCreateUser}>Cadastrar</Button>
+              <Button fullWidth loading={loading} onClick={handleCreateUser}>me cadastrar</Button>
             </div>
           </div>
 

@@ -21,7 +21,7 @@ export const Home: React.FC<any> = () => (
         <div className="row">
           <div className="col-md-6">
             <Separator />
-            <Button fullWidth type="secundary" router="/cadastre-se">cadastre-se</Button>
+            <Button fullWidth router="/cadastre-se" type="secundary">cadastre-se</Button>
           </div>
           <div className="col-md-6">
             <Separator />

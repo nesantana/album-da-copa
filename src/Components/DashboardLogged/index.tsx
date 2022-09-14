@@ -1,6 +1,7 @@
+import { api } from '@src/Services/Api'
 import { SimpleText, Title1 } from '@src/Styles'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FiEdit, FiHome, FiYoutube } from 'react-icons/fi'
 import {
   BoxIcons,
@@ -13,6 +14,11 @@ import {
 
 export const DashboardLogged: React.FC<any> = ({ children, username }) => {
   const router = useRouter()
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    api.setToken(token as string)
+  }, [])
 
   return (
     <>

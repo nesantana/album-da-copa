@@ -59,9 +59,6 @@ export const MyAlbum: React.FC<any> = () => {
       return
     }
 
-    const token = localStorage.getItem('token')
-    api.setToken(token as string)
-
     searchMyAlbum()
   }, [router])
 
